@@ -1,0 +1,23 @@
+{% extends "base.twig" %}
+{% block title %}Accueil{% endblock %}
+{% block content %}
+    {% if isConnected %}
+    <div class="col-md-3">
+        <ul class="nav bd-sidenav">
+            <li><a href="/projet-web/redaction/">Créer un article</a></li>
+            <li><a href="/projet-web/mes-articles/">Mes articles</a></li>
+            <li><a href="/projet-web/tags/">Tags</a></li>
+        </ul>
+    </div>
+    {% endif %}
+    <div class="col-md-9">
+        <h3>Articles</h3>
+        {% if (articles is not empty) %}
+            {% for article in articles %}
+                {% include 'article/articleContent.twig' %}
+            {% endfor %}
+        {% else %}
+            Aucun article trouvé!
+        {% endif %}
+    </div>
+{% endblock %}

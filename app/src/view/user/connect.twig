@@ -1,0 +1,16 @@
+{% extends "base.twig" %}
+{% block title %}Connexion{% endblock %}
+{% block pageTitle %}Connexion{% endblock %}
+{% block content %}
+    <form method="post">
+        <div>
+            <input name="login" type="text" placeholder="login">
+        </div>
+        <div>
+            <input name="password" type="password" placeholder="password">
+        </div>
+        <div>
+            <input type="submit" value="se connecter">
+        </div>
+    </form>
+{% endblock %}

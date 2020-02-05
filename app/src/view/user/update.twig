@@ -1,0 +1,36 @@
+{% extends "base.twig" %}
+{% block title %}Modification{% endblock %}
+{% block pageTitle %}Modification de {{ user.login }}{% endblock %}
+{% block content %}
+    <h3>{{ user.login }}</h3>
+    <form method="post">
+        <div>
+            <input
+                    name="password"
+                    type="password"
+                    value="{{ user.password }}"
+                    placeholder="password">
+        </div>
+        <div>
+            <input name="nom" type="text" value="{{ user.nom }}" placeholder="nom">
+        </div>
+        <div>
+            <input name="prenom" type="text" value="{{ user.prenom }}" placeholder="prenom">
+        </div>
+        <div>
+            <input name="email" type="email" value="{{ user.email }}" placeholder="email">
+        </div>
+        <div>
+            <select name="categoryId">
+            {% for category in categories %}
+                <option {% if category.id == user.category.id %}selected{% endif %} value="{{ category.id }}">{{ category.name }}</option>
+            {% endfor %}
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="envoyer">
+        </div>
+    </form>
+    <pre>{{ dump(user) }}</pre>
+
+{% endblock %}

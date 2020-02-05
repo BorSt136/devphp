@@ -1,0 +1,21 @@
+<div class="jumbotron">
+    <h5>
+        Créé par:
+        {% if tag.author is null %}
+            inconnu
+        {% else %}
+            {{ tag.author.login }}
+        {% endif %}
+    </h5>
+    <h2>Titre :{{ tag.title }}</h2>
+    <p>Contenu :{{ tag.content }}</p>
+    {% if (tag.tag is not empty) %}
+        <p>Tag :{{ tag.tag.name }}</p>
+    {% else %}
+        <p>Tag : /</p>
+    {% endif %}
+
+
+    <pre>{{ dump(tag) }}</pre>
+
+</div>

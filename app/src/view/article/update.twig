@@ -1,0 +1,36 @@
+{% extends "base.twig" %}
+{% block title %}Modification{% endblock %}
+{% block pageTitle %}Modification d'articles{% endblock %}
+{% block content %}
+    <form method="post">
+        <div>
+            Titre :<input
+                    name="title"
+                    type="text"
+                    value="{{ article.title }}"
+                    placeholder="title">
+        </div>
+        <div>
+            Contenu :<textarea name="content">{{ article.content }}</textarea>
+        </div>
+        <div>
+            {% if (article.tag is not empty) %}
+                {% set tagid = article.tag %}
+            {% else %}
+                {% set tagid = '' %}
+            {% endif %}
+            Tag {{ tagid }}Tag :<select name="tagId">
+                {% for tag in tags %}
+                    <option {% if tag.id == tagid %}selected{% endif %} value="{{ tag.id }}">{{ tag.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+
+        <div>
+            <input type="submit" value="envoyer">
+        </div>
+        <a href="./">Retour sur liste articles</a>
+        <pre>{{ dump() }}</pre>
+    </form>
+{% endblock %}

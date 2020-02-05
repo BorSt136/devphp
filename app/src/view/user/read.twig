@@ -1,0 +1,16 @@
+{% extends "base.twig" %}
+{% block title %}Consultation{% endblock %}
+{% block pageTitle %}Mon profil{% endblock %}
+{% block content %}
+    <h2>Nom d'utilisateur:{{ user.login }}</h2>
+    <p>Identifiant: {{ user.id }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Prenom: {{ user.prenom }}</p>
+    <p>Nom: {{ user.nom }}</p>
+    <p>Catégorie: {{ user.category.name }}</p>
+    <br>
+
+    <a href="update/">maj</a>
+    <a href="/projet-web/disconnect/">deconnexion</a>
+    <pre>{{ dump(user) }}</pre>
+{% endblock %}

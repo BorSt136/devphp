@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+{% block title %}{{ titre }}{% endblock %}
+{% block pageTitle %}{{ parent() }} - {{ subTitre }}{% endblock %}
+{% block content %}
+    {% if (articles is not empty) %}
+        {% for article in articles %}
+            {% include 'article/articleContent.twig' %}
+        {% endfor %}
+    {% else %}
+        Aucun article trouvé!
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.twig" %}
+{% block title %}Creation{% endblock %}
+{% block pageTitle %}Creation d'articles{% endblock %}
+{% block content %}
+    <form method="post">
+        <div>
+            <input name="title" type="text" placeholder="title">
+        </div>
+        <div>
+            <textarea name="content"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="envoyer">
+        </div>
+    </form>
+{% endblock %}

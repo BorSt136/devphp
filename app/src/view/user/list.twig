@@ -1,0 +1,14 @@
+{% extends "base.twig" %}
+{% block title %}{{ titre }}{% endblock %}
+{% block pageTitle %}{{ parent() }} - {{ subTitre }}{% endblock %}
+{% block content %}
+    {% if (users is not empty) %}
+        {% for user in users %}
+            <a href="index.php?controller={{ controller }}&action={{ action }}&id={{ user.id }}">
+                {{ user.login }}
+            </a><br>
+        {% endfor %}
+    {% else %}
+        Aucun utilisateur trouvé!
+    {% endif %}
+{% endblock %}
