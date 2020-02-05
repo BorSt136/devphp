@@ -1,6 +1,6 @@
 <?php
 
-namespace ProjetWeb\Model\Service;
+namespace devphp\Model\Service;
 
 interface Crud
 {

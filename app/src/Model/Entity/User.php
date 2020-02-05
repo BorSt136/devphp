@@ -1,7 +1,7 @@
 <?php
 
-namespace ProjetWeb\Model\Entity;
-//use ProjetWeb\Model\Entity\Category;
+namespace devphp\Model\Entity;
+//use devphp\Model\Entity\Category;
 class User
 {
     /** @var ?int $id */

@@ -11,19 +11,19 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/projet-web/">Mon Super Blog</a>
+    <a class="navbar-brand" href="/Awesomesitename/">Mon Super Blog</a>
     <ul class="navbar-nav mr-auto">
         {% if isConnected %}
             <li class="nav-item">
                 Bienvenue
-                <b><a href="/projet-web/profil/?id={{ connectedUser.id }}">
+                <b><a href="/Awesomesitename/profil/?id={{ connectedUser.id }}">
                         {{ connectedUser.login }}
                 </a></b> !
             </li>
-            <li class="nav-item"><a href="/projet-web/disconnect/">Se déconnecter</a></li>
+            <li class="nav-item"><a href="/Awesomesitename/disconnect/">Se déconnecter</a></li>
         {% else %}
-            <li class="nav-item"><a href="/projet-web/connection/">Connectez vous!</a></li>
-            <li class="nav-item"><a href="/projet-web/inscription/">Inscrivez vous!</a></li>
+            <li class="nav-item"><a href="/Awesomesitename/connection/">Connectez vous!</a></li>
+            <li class="nav-item"><a href="/Awesomesitename/inscription/">Inscrivez vous!</a></li>
         {% endif %}
     </ul>
 </nav>

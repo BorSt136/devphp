@@ -1,20 +1,20 @@
 <?php
 
 
-namespace ProjetWeb\Model\Service\Database;
+namespace devphp\Model\Service\Database;
 
-use ProjetWeb\Model\Entity\Tag as TagEntity;
+use devphp\Model\Entity\Tag as TagEntity;
 use PDO;
-use ProjetWeb\Model\Service\Crud;
+use devphp\Model\Service\Crud;
 
-//use ProjetWeb\Model\Service\Crud;
+//use devphp\Model\Service\Crud;
 
 class Tag implements Crud
 {
 
     public function list()
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=projet-web;charset=utf8', 'root', 'test');
+        $bdd = new PDO('mysql:host=localhost;dbname=Awesomesitename;charset=utf8', 'root', 'test');
         $sql = <<<SQL
 SELECT * FROM tag
 SQL;
@@ -29,7 +29,7 @@ SQL;
 
     public function read(int $id) :?TagEntity
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=projet-web;charset=utf8', 'root', 'test');
+        $bdd = new PDO('mysql:host=localhost;dbname=Awesomesitename;charset=utf8', 'root', 'test');
         $sql = <<<SQL
 SELECT * FROM `tag` 
 WHERE `tag_id` = $id

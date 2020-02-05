@@ -1,7 +1,7 @@
 <?php
 
 
-namespace ProjetWeb\Exception;
+namespace devphp\Exception;
 
 class UnexpectedClassException extends \UnexpectedValueException
 {

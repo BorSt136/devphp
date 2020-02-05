@@ -1,8 +1,8 @@
 <?php
-namespace ProjetWeb\Routing;
+namespace devphp\Routing;
 
-use ProjetWeb\Exception\ActionNotFoundException;
-use ProjetWeb\Exception\ControllerNotFoundException;
+use devphp\Exception\ActionNotFoundException;
+use devphp\Exception\ControllerNotFoundException;
 
 class Router
 {
@@ -19,7 +19,7 @@ class Router
     public function __construct(array $routes)
     {
         $this->routes = $routes;
-        $regexp = "/^\/projet-web\/([^?]+)[\?]?.*/";
+        $regexp = "/^\/Awesomesitename\/([^?]+)[\?]?.*/";
 
         if(preg_match($regexp, $_SERVER['REQUEST_URI'], $captureGroups) !== false)
         {

@@ -1,10 +1,10 @@
 <?php
 
-namespace ProjetWeb\Model\Service\Session;
+namespace devphp\Model\Service\Session;
 
-use ProjetWeb\Exception\UnexpectedClassException;
-use ProjetWeb\Model\Entity\Article as ArticleEntity;
-use ProjetWeb\Model\Service\Crud;
+use devphp\Exception\UnexpectedClassException;
+use devphp\Model\Entity\Article as ArticleEntity;
+use devphp\Model\Service\Crud;
 
 class Article implements Crud
 {

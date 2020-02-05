@@ -1,10 +1,10 @@
 <?php
 
-namespace ProjetWeb\Controller;
+namespace devphp\Controller;
 
-use ProjetWeb\Model\Entity\Article as ArticleModel;
-use ProjetWeb\Model\Service\Database\Article as ArticleService;
-use ProjetWeb\Model\Service\Database\Tag as TagService;
+use devphp\Model\Entity\Article as ArticleModel;
+use devphp\Model\Service\Database\Article as ArticleService;
+use devphp\Model\Service\Database\Tag as TagService;
 class ArticleController extends Controller
 {
     private $articleService;
@@ -83,7 +83,7 @@ class ArticleController extends Controller
     public function readMine()
     {
         if (!$this->sessionService->isConnected()) {
-            header('Location: /projet-web/connection/');
+            header('Location: /Awesomesitename/connection/');
         }
 
         $myArticles = [];

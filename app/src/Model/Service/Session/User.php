@@ -1,9 +1,9 @@
 <?php
 
-namespace ProjetWeb\Model\Service\Session;
+namespace devphp\Model\Service\Session;
 
-use ProjetWeb\Exception\UnexpectedClassException;
-use ProjetWeb\Model\Entity\User as UserEntity;
+use devphp\Exception\UnexpectedClassException;
+use devphp\Model\Entity\User as UserEntity;
 
 class User
 {

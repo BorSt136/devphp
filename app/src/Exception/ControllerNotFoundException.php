@@ -1,6 +1,6 @@
 <?php
 
-namespace ProjetWeb\Exception;
+namespace devphp\Exception;
 
 class ControllerNotFoundException extends \Exception
 {

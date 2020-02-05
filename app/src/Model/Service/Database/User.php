@@ -1,11 +1,11 @@
 <?php
 
-namespace ProjetWeb\Model\Service\Database;
+namespace devphp\Model\Service\Database;
 
 
-use ProjetWeb\Model\Entity\User as UserEntity;
-use ProjetWeb\Model\Service\Database\Category as CategoryService;
-use ProjetWeb\Model\Service\Crud;
+use devphp\Model\Entity\User as UserEntity;
+use devphp\Model\Service\Database\Category as CategoryService;
+use devphp\Model\Service\Crud;
 use PDO;
 
 class User implements Crud
@@ -14,7 +14,7 @@ class User implements Crud
     /** @param UserEntity $entity */
     public function create($entity)
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=projet-web;charset=utf8', 'root', 'test');
+        $bdd = new PDO('mysql:host=localhost;dbname=Awesomesitename;charset=utf8', 'root', 'test');
         $login = $entity->getLogin();
         $password = $entity->getPassword();
         $sql = <<<SQL
@@ -28,7 +28,7 @@ SQL;
     {
         //TO DO: Check if ID exists or is deactivated/deleted
 
-        $bdd = new PDO('mysql:host=localhost;dbname=projet-web;charset=utf8', 'root', 'test');
+        $bdd = new PDO('mysql:host=localhost;dbname=Awesomesitename;charset=utf8', 'root', 'test');
         $sql = <<<SQL
 SELECT * FROM user
 WHERE id = $id
@@ -56,7 +56,7 @@ SQL;
     /** @param UserEntity $entity */
     public function update($entity)
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=projet-web;charset=utf8', 'root', 'test');
+        $bdd = new PDO('mysql:host=localhost;dbname=Awesomesitename;charset=utf8', 'root', 'test');
         $password = $entity->getPassword();
         $email = $entity->getEmail();
         $nom = $entity->getNom();
@@ -78,7 +78,7 @@ SQL;
 
     public function delete(int $id): bool
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=projet-web;charset=utf8', 'root', 'test');
+        $bdd = new PDO('mysql:host=localhost;dbname=Awesomesitename;charset=utf8', 'root', 'test');
         $sql = <<<SQL
 DELETE FROM user
 WHERE id = $id
@@ -90,7 +90,7 @@ SQL;
      * @return UserEntity[]
      */
     public function list(): array {
-        $bdd = new PDO('mysql:host=localhost;dbname=projet-web;charset=utf8', 'root', 'test');
+        $bdd = new PDO('mysql:host=localhost;dbname=Awesomesitename;charset=utf8', 'root', 'test');
         $sql = <<<SQL
 SELECT * FROM user
 SQL;
@@ -116,7 +116,7 @@ SQL;
     public function getByLoginAndPassword(string $login, string $password): UserEntity
     {
 
-        $bdd = new PDO('mysql:host=localhost;dbname=projet-web;charset=utf8', 'root', 'test');
+        $bdd = new PDO('mysql:host=localhost;dbname=Awesomesitename;charset=utf8', 'root', 'test');
         $sql = <<<SQL
 SELECT * FROM user
 WHERE login = "$login" AND password = "$password"

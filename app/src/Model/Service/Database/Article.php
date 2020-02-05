@@ -1,12 +1,12 @@
 <?php
 
-namespace ProjetWeb\Model\Service\Database;
+namespace devphp\Model\Service\Database;
 
-use ProjetWeb\Model\Service\Database\User as UserService;
-use ProjetWeb\Model\Service\Database\Tag as TagService;
+use devphp\Model\Service\Database\User as UserService;
+use devphp\Model\Service\Database\Tag as TagService;
 
-use ProjetWeb\Model\Service\Crud;
-use ProjetWeb\Model\Entity\Article as ArticleEntity;
+use devphp\Model\Service\Crud;
+use devphp\Model\Entity\Article as ArticleEntity;
 use PDO;
 
 class Article implements Crud
@@ -14,7 +14,7 @@ class Article implements Crud
     /** @param ArticleEntity $entity */
     public function create($entity)
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=projet-web;charset=utf8', 'root', 'test');
+        $bdd = new PDO('mysql:host=localhost;dbname=Awesomesitename;charset=utf8', 'root', 'test');
         $content = $entity->getContent();
         $title = $entity->getTitle();
         $userId = $entity->getAuthor() !== null ? $entity->getAuthor()->getId() : 'null';
@@ -28,7 +28,7 @@ SQL;
 
     public function read(int $id): ArticleEntity
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=projet-web;charset=utf8', 'root', 'test');
+        $bdd = new PDO('mysql:host=localhost;dbname=Awesomesitename;charset=utf8', 'root', 'test');
         $sql = <<<SQL
 SELECT * FROM article 
 WHERE id = $id
@@ -53,7 +53,7 @@ SQL;
     /** @param ArticleEntity $entity */
     public function update($entity)
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=projet-web;charset=utf8', 'root', 'test');
+        $bdd = new PDO('mysql:host=localhost;dbname=Awesomesitename;charset=utf8', 'root', 'test');
         $content = $entity->getContent();
         $title = $entity->getTitle();
         $userId = $entity->getAuthor() !== null ? $entity->getAuthor()->getId() : 'null';
@@ -73,7 +73,7 @@ SQL;
 
     public function delete(int $id): bool
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=projet-web;charset=utf8', 'root', 'test');
+        $bdd = new PDO('mysql:host=localhost;dbname=Awesomesitename;charset=utf8', 'root', 'test');
         $sql = <<<SQL
 DELETE FROM article
 WHERE id = $id
@@ -85,7 +85,7 @@ SQL;
      * @return ArticleEntity[]
     */
     public function list(): array {
-        $bdd = new PDO('mysql:host=localhost;dbname=projet-web;charset=utf8', 'root', 'test');
+        $bdd = new PDO('mysql:host=localhost;dbname=Awesomesitename;charset=utf8', 'root', 'test');
         $sql = <<<SQL
 SELECT * FROM article
 SQL;

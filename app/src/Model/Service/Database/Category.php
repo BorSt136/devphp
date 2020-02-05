@@ -1,9 +1,9 @@
 <?php
 
 
-namespace ProjetWeb\Model\Service\Database;
+namespace devphp\Model\Service\Database;
 
-use ProjetWeb\Model\Entity\Category as CategoryEntity;
+use devphp\Model\Entity\Category as CategoryEntity;
 use PDO;
 
 class Category
@@ -11,7 +11,7 @@ class Category
 
     public function list()
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=projet-web;charset=utf8', 'root', 'test');
+        $bdd = new PDO('mysql:host=localhost;dbname=Awesomesitename;charset=utf8', 'root', 'test');
         $sql = <<<SQL
 SELECT * FROM category
 SQL;
@@ -26,7 +26,7 @@ SQL;
 
     public function read(int $id) :?CategoryEntity
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=projet-web;charset=utf8', 'root', 'test');
+        $bdd = new PDO('mysql:host=localhost;dbname=Awesomesitename;charset=utf8', 'root', 'test');
         $sql = <<<SQL
 SELECT * FROM category 
 WHERE id = $id

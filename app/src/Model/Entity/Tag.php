@@ -6,7 +6,7 @@
  * Time: 19:07
  */
 
-namespace ProjetWeb\Model\Entity;
+namespace devphp\Model\Entity;
 
 
 class Tag

@@ -1,8 +1,8 @@
 <?php
 
-namespace ProjetWeb\Controller;
+namespace devphp\Controller;
 
-use ProjetWeb\Model\Service\Database\Article as ArticleService;
+use devphp\Model\Service\Database\Article as ArticleService;
 
 class HomeController extends Controller
 {

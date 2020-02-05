@@ -1,8 +1,8 @@
 <?php
 
-namespace ProjetWeb\Controller;
+namespace devphp\Controller;
 
-use ProjetWeb\Model\Service\Session\User as SessionService;
+use devphp\Model\Service\Session\User as SessionService;
 
 abstract class Controller
 {
@@ -13,7 +13,7 @@ abstract class Controller
      */
     protected $sessionService;
     /**
-     * @var \ProjetWeb\Model\Entity\User|null
+     * @var \devphp\Model\Entity\User|null
      */
     protected $connectedUser;
 

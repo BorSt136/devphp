@@ -1,6 +1,6 @@
 <?php
 
-namespace ProjetWeb\Model\Entity;
+namespace devphp\Model\Entity;
 
 class Article
 {

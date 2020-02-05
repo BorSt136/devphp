@@ -1,10 +1,10 @@
 <?php
 
-namespace ProjetWeb\Controller;
+namespace devphp\Controller;
 
-use ProjetWeb\Model\Entity\User;
-use ProjetWeb\Model\Service\Database\User as UserService;
-use ProjetWeb\Model\Service\Database\Category as CategoryService;
+use devphp\Model\Entity\User;
+use devphp\Model\Service\Database\User as UserService;
+use devphp\Model\Service\Database\Category as CategoryService;
 
 class UserController extends Controller
 {
@@ -48,7 +48,7 @@ class UserController extends Controller
     public function update()
     {
         if (!$this->sessionService->isConnected()) {
-            header('Location: /projet-web/connection/');
+            header('Location: /Awesomesitename/connection/');
         }
         /** @var User $user */
         $user = $this->connectedUser;
@@ -85,7 +85,7 @@ class UserController extends Controller
             $user = $this->userService->getByLoginAndPassword($_POST['login'], $_POST['password']);
             if ($user->getId() !== null) {
                 $this->sessionService->create($user);
-                header('Location: /projet-web/profil/?id=' . $user->getId());
+                header('Location: /Awesomesitename/profil/?id=' . $user->getId());
             }
         }
 
@@ -95,7 +95,7 @@ class UserController extends Controller
     public function disconnect()
     {
         $this->sessionService->destroy();
-        header('Location: /projet-web/');
+        header('Location: /Awesomesitename/');
     }
 
     private function displayList(string $action, string $titre, string $subtitre)

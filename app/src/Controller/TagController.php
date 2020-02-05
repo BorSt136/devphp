@@ -1,9 +1,9 @@
 <?php
 
-namespace ProjetWeb\Controller;
+namespace devphp\Controller;
 
-use ProjetWeb\Model\Entity\Tag as TagEntity;
-use ProjetWeb\Model\Service\Database\Tag as TagService;
+use devphp\Model\Entity\Tag as TagEntity;
+use devphp\Model\Service\Database\Tag as TagService;
 
 class TagController extends Controller
 {
