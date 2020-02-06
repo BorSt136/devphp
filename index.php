@@ -11,8 +11,8 @@ $templateEngine = new \Twig\Environment($loader);
 $templateEngine->enableDebug();
 $templateEngine->addExtension(new \Twig\Extension\DebugExtension());
 
-$router = new ProjetWeb\Routing\Router(include 'app/src/Routing/routes.php');
-
+$router = new devphp\Routing\Router(include 'app/src/Routing/routes.php');
+echo $_SERVER['REQUEST_URI'];
 try {
     $controllerName = 'devphp\\Controller\\' . ucfirst($router->getController()) . 'Controller';
     $action = $router->getAction();
